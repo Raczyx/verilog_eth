@@ -1,0 +1,20 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759910078" />
+    <testcase name="run_test_reg_access_001" classname="test_eth_mac_lite" file="/home/xuser/.local/lib/python3.12/site-packages/cocotb/regression.py" lineno="727" time="0.05095529556274414" sim_time_ns="0.001" ratio_time="0.019625045620011043">
+      <failure message="Test failed with RANDOM_SEED=1759910078" />
+    </testcase>
+    <testcase name="run_test_tx_rx_001" classname="test_eth_mac_lite" file="/home/xuser/.local/lib/python3.12/site-packages/cocotb/regression.py" lineno="727" time="0.007570743560791016" sim_time_ns="0.001" ratio_time="0.13208742205706367">
+      <failure message="Test failed with RANDOM_SEED=1759910078" />
+    </testcase>
+    <testcase name="run_test_tx_rx_002" classname="test_eth_mac_lite" file="/home/xuser/.local/lib/python3.12/site-packages/cocotb/regression.py" lineno="727" time="0.0068454742431640625" sim_time_ns="0.001" ratio_time="0.1460819169685149">
+      <failure message="Test failed with RANDOM_SEED=1759910078" />
+    </testcase>
+    <testcase name="run_test_tx_rx_003" classname="test_eth_mac_lite" file="/home/xuser/.local/lib/python3.12/site-packages/cocotb/regression.py" lineno="727" time="0.007082700729370117" sim_time_ns="0.001" ratio_time="0.1411890800148113">
+      <failure message="Test failed with RANDOM_SEED=1759910078" />
+    </testcase>
+    <testcase name="run_test_filter_drop_001" classname="test_eth_mac_lite" file="/home/xuser/.local/lib/python3.12/site-packages/cocotb/regression.py" lineno="727" time="0.006982088088989258" sim_time_ns="0.001" ratio_time="0.14322362984463036">
+      <failure message="Test failed with RANDOM_SEED=1759910078" />
+    </testcase>
+  </testsuite>
+</testsuites>

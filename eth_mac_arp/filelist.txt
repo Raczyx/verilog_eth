@@ -1,0 +1,50 @@
+# Ethernet MAC with ARP - File List
+# 用于仿真和综合的文件清单
+
+# 顶层模块
+rtl/eth_mac_arp.v
+rtl/eth_mac_arp_regs.v
+
+# MAC 层 (来自 verilog-ethernet)
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v
+../verilog-ethernet/rtl/eth_mac_1g.v
+../verilog-ethernet/rtl/axis_gmii_rx.v
+../verilog-ethernet/rtl/axis_gmii_tx.v
+../verilog-ethernet/rtl/lfsr.v
+../verilog-ethernet/rtl/rgmii_phy_if.v
+../verilog-ethernet/rtl/ssio_ddr_in.v
+../verilog-ethernet/rtl/ssio_ddr_out.v
+../verilog-ethernet/rtl/mii_phy_if.v
+
+# 帧过滤器
+../eth_frame_filter.v
+
+# 以太网帧处理
+../verilog-ethernet/rtl/eth_axis_rx.v
+../verilog-ethernet/rtl/eth_axis_tx.v
+
+# ARP 模块 (保留)
+../verilog-ethernet/rtl/arp_eth_rx.v
+../verilog-ethernet/rtl/arp_eth_tx.v
+../verilog-ethernet/rtl/arp.v
+../verilog-ethernet/rtl/arp_cache.v
+
+# AXI DMA
+../verilog-axi/rtl/axi_dma.v
+../verilog-axi/rtl/axi_dma_rd.v
+../verilog-axi/rtl/axi_dma_wr.v
+../verilog-axi/rtl/arbiter.v
+../verilog-axi/rtl/priority_encoder.v
+
+# AXIS 位宽转换
+../verilog-ethernet/lib/axis/rtl/axis_adapter.v
+../verilog-ethernet/lib/axis/rtl/axis_async_fifo.v
+../verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v
+../verilog-ethernet/lib/axis/rtl/axis_fifo.v
+
+# 注意: 
+# - 不包含 IP 相关模块 (ip.v, ip_eth_rx.v, ip_eth_tx.v, ip_complete.v)
+# - ARP 功能完整保留
+# - 适用于需要 ARP 但不需要 IP 协议的场景
+

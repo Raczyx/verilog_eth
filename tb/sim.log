@@ -1,0 +1,84 @@
+=== 使用 Icarus Verilog 编译 ===
+iverilog -g2012 -Wall -Wno-timescale -o work/eth_mac_rgmii_axi_tb.vvp ../eth_mac_rgmii_axi.v ../eth_frame_filter.v ../eth_mac_axil_regs.v ../verilog-ethernet/rtl/eth_mac_1g_rgmii.v ../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v ../verilog-ethernet/rtl/eth_mac_1g.v ../verilog-ethernet/rtl/eth_axis_rx.v ../verilog-ethernet/rtl/eth_axis_tx.v ../verilog-ethernet/rtl/ip_complete.v ../verilog-ethernet/rtl/ip.v ../verilog-ethernet/rtl/ip_eth_rx.v ../verilog-ethernet/rtl/ip_eth_tx.v ../verilog-ethernet/rtl/arp.v ../verilog-ethernet/rtl/arp_eth_rx.v ../verilog-ethernet/rtl/arp_eth_tx.v ../verilog-ethernet/rtl/arp_cache.v ../verilog-ethernet/rtl/eth_arb_mux.v ../verilog-ethernet/rtl/axis_gmii_rx.v ../verilog-ethernet/rtl/axis_gmii_tx.v ../verilog-ethernet/rtl/rgmii_phy_if.v ../verilog-ethernet/rtl/ssio_ddr_in.v ../verilog-ethernet/rtl/ssio_ddr_out.v ../verilog-ethernet/rtl/iddr.v ../verilog-ethernet/rtl/oddr.v ../verilog-ethernet/rtl/lfsr.v ../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo_adapter.v ../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo.v ../verilog-axi/rtl/axi_dma.v ../verilog-axi/rtl/axi_dma_rd.v ../verilog-axi/rtl/axi_dma_wr.v ../verilog-axi/rtl/arbiter.v ../verilog-axi/rtl/priority_encoder.v eth_mac_rgmii_axi_tb.v
+eth_mac_rgmii_axi_tb.v:398: error: Cannot "return" from tasks.
+eth_mac_rgmii_axi_tb.v:413: error: Cannot "return" from tasks.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 20 (tx_ptp_ts) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 21 (rx_ptp_ts) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 25 (tx_lfc_req) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 26 (tx_lfc_resend) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 27 (rx_lfc_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 29 (rx_lfc_ack) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 30 (tx_pfc_req) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 31 (tx_pfc_resend) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 32 (rx_pfc_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 34 (rx_pfc_ack) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 35 (tx_lfc_pause_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 36 (tx_pause_req) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 68 (cfg_mcf_rx_eth_dst_mcast) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 69 (cfg_mcf_rx_check_eth_dst_mcast) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 70 (cfg_mcf_rx_eth_dst_ucast) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 71 (cfg_mcf_rx_check_eth_dst_ucast) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 72 (cfg_mcf_rx_eth_src) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 73 (cfg_mcf_rx_check_eth_src) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 74 (cfg_mcf_rx_eth_type) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 75 (cfg_mcf_rx_opcode_lfc) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 76 (cfg_mcf_rx_check_opcode_lfc) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 77 (cfg_mcf_rx_opcode_pfc) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 78 (cfg_mcf_rx_check_opcode_pfc) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 79 (cfg_mcf_rx_forward) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 80 (cfg_mcf_rx_enable) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 81 (cfg_tx_lfc_eth_dst) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 82 (cfg_tx_lfc_eth_src) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 83 (cfg_tx_lfc_eth_type) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 84 (cfg_tx_lfc_opcode) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 85 (cfg_tx_lfc_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 86 (cfg_tx_lfc_quanta) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 87 (cfg_tx_lfc_refresh) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 88 (cfg_tx_pfc_eth_dst) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 89 (cfg_tx_pfc_eth_src) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 90 (cfg_tx_pfc_eth_type) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 91 (cfg_tx_pfc_opcode) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 92 (cfg_tx_pfc_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 93 (cfg_tx_pfc_quanta) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 94 (cfg_tx_pfc_refresh) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 95 (cfg_rx_lfc_opcode) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 96 (cfg_rx_lfc_en) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 97 (cfg_rx_pfc_opcode) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii.v:222: warning: Instantiating module eth_mac_1g with dangling input port 98 (cfg_rx_pfc_en) floating.
+../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo.v:327: warning: m_axis[9+:8] is selecting after vector.
+../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo.v:328: warning: m_axis[9+:8] is selecting after vector.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273: warning: Port 8 (s_axis_tid) of axis_async_fifo_adapter expects 8 bits, got 32.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273:        : Pruning (signed) 24 high bits of the expression.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273: warning: Port 9 (s_axis_tdest) of axis_async_fifo_adapter expects 8 bits, got 32.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273:        : Pruning (signed) 24 high bits of the expression.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273: warning: Instantiating module axis_async_fifo_adapter with dangling input port 21 (s_pause_req) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:273: warning: Instantiating module axis_async_fifo_adapter with dangling input port 23 (m_pause_req) floating.
+../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo.v:327: warning: m_axis[9+:8] is selecting after vector.
+../verilog-ethernet/rtl/../lib/axis/rtl/axis_async_fifo.v:328: warning: m_axis[9+:8] is selecting after vector.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324: warning: Port 4 (s_axis_tkeep) of axis_async_fifo_adapter expects 1 bits, got 32.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324:        : Pruning (signed) 31 high bits of the expression.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324: warning: Port 8 (s_axis_tid) of axis_async_fifo_adapter expects 8 bits, got 32.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324:        : Pruning (signed) 24 high bits of the expression.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324: warning: Port 9 (s_axis_tdest) of axis_async_fifo_adapter expects 8 bits, got 32.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324:        : Pruning (signed) 24 high bits of the expression.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324: warning: Instantiating module axis_async_fifo_adapter with dangling input port 21 (s_pause_req) floating.
+../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v:324: warning: Instantiating module axis_async_fifo_adapter with dangling input port 23 (m_pause_req) floating.
+../verilog-ethernet/rtl/ip_complete.v:269: warning: Port 9 (s_eth_payload_axis_tkeep) of eth_arb_mux expects 2 bits, got 32.
+../verilog-ethernet/rtl/ip_complete.v:269:        : Pruning (signed) 30 high bits of the expression.
+../verilog-ethernet/rtl/ip_complete.v:269: warning: Port 13 (s_eth_payload_axis_tid) of eth_arb_mux expects 16 bits, got 32.
+../verilog-ethernet/rtl/ip_complete.v:269:        : Pruning (signed) 16 high bits of the expression.
+../verilog-ethernet/rtl/ip_complete.v:269: warning: Port 14 (s_eth_payload_axis_tdest) of eth_arb_mux expects 16 bits, got 32.
+../verilog-ethernet/rtl/ip_complete.v:269:        : Pruning (signed) 16 high bits of the expression.
+../verilog-ethernet/rtl/arp_cache.v:166: warning: @* is sensitive to all 16 words in array 'valid_mem'.
+../verilog-ethernet/rtl/arp_cache.v:166: warning: @* is sensitive to all 16 words in array 'ip_addr_mem'.
+../verilog-ethernet/rtl/ip_complete.v:401: warning: Instantiating module arp with dangling input port 9 (s_eth_payload_axis_tkeep) floating.
+../eth_mac_rgmii_axi.v:565: warning: Instantiating module eth_axis_tx with dangling input port 9 (s_eth_payload_axis_tkeep) floating.
+../verilog-axi/rtl/axi_dma_wr.v:759: warning: @* is sensitive to all 32 words in array 'status_fifo_len'.
+../verilog-axi/rtl/axi_dma_wr.v:760: warning: @* is sensitive to all 32 words in array 'status_fifo_tag'.
+../verilog-axi/rtl/axi_dma_wr.v:761: warning: @* is sensitive to all 32 words in array 'status_fifo_id'.
+../verilog-axi/rtl/axi_dma_wr.v:762: warning: @* is sensitive to all 32 words in array 'status_fifo_dest'.
+../verilog-axi/rtl/axi_dma_wr.v:763: warning: @* is sensitive to all 32 words in array 'status_fifo_user'.
+../verilog-axi/rtl/axi_dma_wr.v:771: warning: @* is sensitive to all 32 words in array 'status_fifo_last'.
+../verilog-axi/rtl/axi_dma_wr.v:775: warning: @* is sensitive to all 32 words in array 'status_fifo_last'.
+2 error(s) during elaboration.
+make: *** [Makefile:106：work/eth_mac_rgmii_axi_tb.vvp] 错误 2

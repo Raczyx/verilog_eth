@@ -1,0 +1,174 @@
+╔══════════════════════════════════════════════════════════════════╗
+║        以太网 MAC RGMII AXI - 项目目录说明                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📁 根目录结构
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+verilog/
+├── README.md                      ⭐ 项目主文档（从这里开始）
+├── 全面测试总结.txt                ⭐ 最新测试报告
+├── 目录说明.txt                   📋 本文件
+│
+├── eth_mac_rgmii_axi.v            🎯 顶层模块
+├── eth_mac_axil_regs.v            🎯 寄存器接口
+├── eth_frame_filter.v             🎯 帧过滤
+├── eth_mac_example.v              🎯 使用示例
+│
+├── docs/                          📚 文档目录
+│   ├── README.md                  文档导航
+│   ├── project/                   项目文档
+│   └── testing/                   测试报告
+│
+├── tb/                            🧪 测试平台
+│   ├── eth_mac_rgmii_axi_tb.v     测试文件 (1416行)
+│   ├── Makefile                   构建文件
+│   └── work/                      仿真输出
+│
+├── verilog-axi/                   📚 AXI库（依赖）
+└── verilog-ethernet/              📚 以太网库（依赖）
+
+
+📚 docs/project/ - 项目文档
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+├── README.md                      文档导航索引
+├── 仿真说明_请先阅读.txt           🔰 新手入门（推荐首读）
+├── QUICK_START.md                 🚀 快速开始指南
+├── PROJECT_SUMMARY.md             📊 项目概述
+├── ETH_MAC_RGMII_README.md        📖 详细设计文档
+├── SIMULATION_SUMMARY_CN.md       🔧 仿真使用说明
+├── TESTING_GUIDE.md               🧪 测试开发指南
+├── VERILATOR_NOTE.md              ⚠️  Verilator兼容性说明
+└── VERILATOR_QUICKSTART.txt       Verilator快速入门
+
+
+📝 docs/testing/ - 测试报告
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+├── README.md                      测试报告索引
+│
+├── 功能测试结果报告.md              📝 测试1-3
+│   ├── 寄存器读写测试               ✅
+│   ├── MAC配置测试                 ✅
+│   └── RGMII接收测试               ✅
+│
+├── ARP和帧过滤测试报告.md           📝 测试4-5
+│   ├── ARP协议测试                 ✅
+│   └── 帧过滤测试                  ✅
+│
+├── DMA和TX测试报告.md              📝 测试6-8
+│   ├── DMA接收测试                 ✅
+│   ├── DMA发送测试                 ✅
+│   └── RGMII发送测试               ✅
+│
+├── 高级功能测试报告.md              📝 测试9-11
+│   ├── 中断系统测试                ✅
+│   ├── 多描述符队列测试             ✅
+│   └── 错误处理测试                ✅
+│
+└── archive/                       📦 历史版本报告
+    ├── 测试结果总结.txt
+    ├── 测试进展分析.md
+    ├── 测试成功摘要.txt
+    ├── 测试总结_最新.txt
+    ├── 完整测试总结.txt
+    └── TESTING_SUMMARY.txt
+
+
+🧪 tb/ - 测试平台目录
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+├── eth_mac_rgmii_axi_tb.v         ⭐ 主测试文件
+├── Makefile                       ⭐ 构建文件（Icarus）
+├── Makefile.verilator             Verilator构建文件
+├── run_sim.sh                     运行脚本
+├── README_TEST.md                 测试说明
+│
+└── work/                          仿真输出目录
+    └── eth_mac_rgmii_axi_tb.vcd   波形文件 (4.8MB)
+
+
+🎯 快速开始指南
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  查看项目概况
+   $ cat README.md
+
+2️⃣  查看测试结果
+   $ cat 全面测试总结.txt
+
+3️⃣  运行仿真
+   $ cd tb
+   $ make              # 编译并运行
+   $ make waves        # 查看波形
+
+4️⃣  学习项目
+   $ cat docs/project/仿真说明_请先阅读.txt
+   $ cat docs/project/QUICK_START.md
+
+
+📖 推荐阅读顺序
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+新手入门路径 (15-30分钟):
+  1. README.md
+  2. 全面测试总结.txt
+  3. docs/project/仿真说明_请先阅读.txt
+  4. docs/project/QUICK_START.md
+
+深入学习路径 (1-2小时):
+  1. docs/project/PROJECT_SUMMARY.md
+  2. docs/project/ETH_MAC_RGMII_README.md
+  3. docs/testing/ (所有测试报告)
+  4. eth_mac_rgmii_axi.v (源代码)
+
+测试开发路径 (30分钟):
+  1. docs/project/TESTING_GUIDE.md
+  2. docs/testing/README.md
+  3. tb/eth_mac_rgmii_axi_tb.v
+
+
+📊 项目状态
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+测试通过:    11/11 (100%) ✅
+功能完成:    26/30 (86.7%)
+综合评分:    4.4/5.0 ⭐⭐⭐⭐☆
+项目状态:    可用于集成测试 ✅
+
+详见: 全面测试总结.txt
+
+
+📞 文件查找指南
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+想要...                        查看文件...
+────────────────────────────────────────────────────────
+了解项目                       README.md
+查看测试结果                   全面测试总结.txt
+学习如何使用                   docs/project/QUICK_START.md
+了解设计细节                   docs/project/ETH_MAC_RGMII_README.md
+查看寄存器定义                 eth_mac_axil_regs.v (注释)
+运行仿真                       cd tb && make
+查看波形                       cd tb && make waves
+编写测试                       docs/project/TESTING_GUIDE.md
+查看测试代码                   tb/eth_mac_rgmii_axi_tb.v
+查看所有测试报告               docs/testing/README.md
+
+
+💡 提示
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• 所有文档都有详细的中文说明
+• 测试报告包含详细的波形分析
+• 代码中有丰富的注释
+• Makefile 中有常用命令
+• 如有问题，先查看 docs/project/仿真说明_请先阅读.txt
+
+╔══════════════════════════════════════════════════════════════════╗
+║  目录整理完成！所有文档已分类归档，方便查找和使用。              ║
+╚══════════════════════════════════════════════════════════════════╝
+
+整理日期: 2025年10月7日
+版本: v1.0

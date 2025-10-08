@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Oct  8 17:19:02 2025
+# Process ID: 653853
+# Current directory: /home/xuser/code_space/verilog/verilog/eth_mac_lite/test
+# Command line: vivado
+# Log file: /home/xuser/code_space/verilog/verilog/eth_mac_lite/test/vivado.log
+# Journal file: /home/xuser/code_space/verilog/verilog/eth_mac_lite/test/vivado.jou
+# Running On: arch, OS: Linux, CPU Frequency: 1113.000 MHz, CPU Physical cores: 16, Host memory: 16063 MB
+#-----------------------------------------------------------
+start_gui
+create_project verilog_eth_A /home/xuser/code_space/verilog_eth_A -part xcu250-figd2104-2L-e
+add_files -scan_for_includes {/home/xuser/code_space/verilog/verilog/eth_mac_lite/rtl/eth_mac_lite.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/rtl/eth_frame_filter.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/rtl/eth_mac_lite_regs.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/ssio_sdr_in.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axi_dma_wr.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/oddr.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axis_async_fifo_adapter.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/ssio_sdr_out.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/priority_encoder.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/ssio_ddr_in.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axis_adapter.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/eth_mac_1g_rgmii.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axi_dma_rd.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/eth_mac_1g.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/iddr.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axi_dma.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/rgmii_phy_if.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/arbiter.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axis_gmii_rx.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axis_gmii_tx.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/ssio_ddr_out.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/eth_mac_1g_rgmii_fifo.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/axis_async_fifo.v /home/xuser/code_space/verilog/verilog/eth_mac_lite/lib/lfsr.v}
+import_files -force
+synth_design -part xcu250-figd2104-2L-e -lint 
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top eth_mac_lite [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1

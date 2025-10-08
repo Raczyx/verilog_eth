@@ -1,0 +1,105 @@
+# 以太网 MAC IP 文件列表
+# 用于综合和仿真的文件列表
+
+# ============================================================================
+# 核心设计文件
+# ============================================================================
+
+# 顶层模块
+eth_mac_rgmii_axi.v
+
+# 帧过滤器模块
+eth_frame_filter.v
+
+# 控制寄存器接口
+eth_mac_axil_regs.v
+
+# 使用示例（集成示例）
+eth_mac_example.v
+
+# ============================================================================
+# 依赖的 verilog-ethernet 库文件
+# ============================================================================
+
+# RGMII MAC 核心
+verilog-ethernet/rtl/eth_mac_1g_rgmii.v
+verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v
+verilog-ethernet/rtl/rgmii_phy_if.v
+
+# 以太网帧处理
+verilog-ethernet/rtl/eth_axis_rx.v
+verilog-ethernet/rtl/eth_axis_tx.v
+
+# IP/ARP 协议栈
+verilog-ethernet/rtl/ip_complete.v
+verilog-ethernet/rtl/ip.v
+verilog-ethernet/rtl/ip_eth_rx.v
+verilog-ethernet/rtl/ip_eth_tx.v
+verilog-ethernet/rtl/arp.v
+verilog-ethernet/rtl/arp_eth_rx.v
+verilog-ethernet/rtl/arp_eth_tx.v
+verilog-ethernet/rtl/arp_cache.v
+
+# 以太网仲裁器
+verilog-ethernet/rtl/eth_arb_mux.v
+
+# DDR IO 模块
+verilog-ethernet/rtl/ssio_ddr_in.v
+verilog-ethernet/rtl/ssio_ddr_out.v
+verilog-ethernet/rtl/iddr.v
+verilog-ethernet/rtl/oddr.v
+
+# LFSR (用于 CRC)
+verilog-ethernet/rtl/lfsr.v
+
+# ============================================================================
+# 依赖的 verilog-axi 库文件
+# ============================================================================
+
+# AXI DMA 引擎
+verilog-axi/rtl/axi_dma.v
+verilog-axi/rtl/axi_dma_rd.v
+verilog-axi/rtl/axi_dma_wr.v
+
+# 仲裁器
+verilog-axi/rtl/arbiter.v
+verilog-axi/rtl/priority_encoder.v
+
+# ============================================================================
+# 额外的依赖库文件（根据目标平台）
+# ============================================================================
+
+# 如果使用 verilog-axis 库的 FIFO
+# verilog-axis/rtl/axis_async_fifo.v
+# verilog-axis/rtl/axis_async_fifo_adapter.v
+
+# ============================================================================
+# 仿真文件（可选）
+# ============================================================================
+
+# 添加 testbench 文件（如果有）
+# eth_mac_rgmii_axi_tb.v
+
+# ============================================================================
+# 约束文件（根据目标平台添加）
+# ============================================================================
+
+# Xilinx 时序约束
+# constraints/eth_mac_timing.xdc
+
+# Xilinx 引脚约束
+# constraints/eth_mac_pins.xdc
+
+# ============================================================================
+# 使用说明
+# ============================================================================
+
+# 对于 Vivado 综合，可以使用以下 TCL 命令：
+# read_verilog -sv [glob *.v]
+# read_verilog -sv [glob verilog-ethernet/rtl/*.v]
+# read_verilog -sv [glob verilog-axi/rtl/*.v]
+
+# 对于 Quartus 综合，将所有 .v 文件添加到项目中
+
+# 对于仿真，使用相同的文件列表加上 testbench 文件
+

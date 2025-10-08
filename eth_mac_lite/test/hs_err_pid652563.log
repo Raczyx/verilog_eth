@@ -1,0 +1,19 @@
+#
+# An unexpected error has occurred (6)
+#
+Stack:
+/usr/lib/libc.so.6(+0x3e540) [0x7a614e03e540]
+/usr/lib/libc.so.6(+0x9894c) [0x7a614e09894c]
+/usr/lib/libc.so.6(gsignal+0x20) [0x7a614e03e410]
+/usr/lib/libc.so.6(abort+0x26) [0x7a614e02557a]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(Tcl_PanicVA+0x10e) [0x7a6149eaaa8e]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(Tcl_Panic+0x8c) [0x7a6149eaab9c]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(TclStackFree+0x49) [0x7a6149e74fb9]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(+0x7600b) [0x7a6149e7600b]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(+0x7e0f9) [0x7a6149e7e0f9]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(TclEvalObjEx+0x76) [0x7a6149e35216]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/librdi_commonmain.so(+0xe752) [0x7a615079d752]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/libtcl8.5.so(Tcl_Main+0x1d0) [0x7a6149ea02f0]
+/data/xuser_data/vivado/Vivado/2023.2/lib/lnx64.o/librdi_common.so(+0xda6f7b) [0x7a614fa20f7b]
+/usr/lib/libc.so.6(+0x969cb) [0x7a614e0969cb]
+/usr/lib/libc.so.6(+0x11aa0c) [0x7a614e11aa0c]
